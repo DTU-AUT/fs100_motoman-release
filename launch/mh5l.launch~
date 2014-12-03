@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='ASCII'?>
+<launch>
+	
+	
+    <node name = "fs100_motoman" pkg="fs100_motman" type="mh5l" output="screen"/>
+	    
+    <node name="gripper_TCP_control" pkg="robotiq_c_model_control" type="CModelTcpNode" args="192.38.66.222" />
+    <!-- <node name="demo" pkg="laser_calibrate" type="robot_demo.py" output="screen" /> -->
+
+</launch>
