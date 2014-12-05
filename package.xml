@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>fs100_motoman</name>
-  <version>0.1.1</version>
+  <version>0.1.2</version>
   <description>The fs100_motoman package</description>
 
 
