@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>fs100_motoman</name>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
   <description>The fs100_motoman package</description>
 
 
@@ -32,11 +32,13 @@
   <build_depend>sensor_msgs</build_depend>
   <build_depend>trajectory_msgs</build_depend>
   <build_depend>message_generation</build_depend>
+  <build_depend>roscpp</build_depend>
     
   <run_depend>std_msgs</run_depend>
   <run_depend>sensor_msgs</run_depend>
   <run_depend>trajectory_msgs</run_depend>
   <run_depend>message_runtime</run_depend>
+  <run_depend>roscpp</run_depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
