@@ -4,7 +4,6 @@ project(fs100_motoman)
 ## Find catkin macros and libraries
 find_package(catkin REQUIRED
 	roscpp
-	rospy
 	std_msgs
 	sensor_msgs
 	trajectory_msgs
@@ -25,6 +24,7 @@ generate_messages(
 
 catkin_package(
   INCLUDE_DIRS include
+  CATKIN_DEPENDS roscpp
 )
 
 ###########
