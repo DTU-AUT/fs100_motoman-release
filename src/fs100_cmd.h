@@ -45,13 +45,20 @@
 #include <pthread.h>
 
 #include "motoman_direct_message.h"
-
+//! Command struct
+/*!
+  Command struct for internal queue. Defines trajectory point position, velocity and time from last command.
+*/
 typedef struct{
-        float pos[6];
-        float vel[6];
-        float time;
+        float pos[6]; /*!< Variable containing trajectory point position. */
+        float vel[6];/*!< Variable containing trajectory point velocity. */
+        float time;/*!< Variable containing trajectory point time from last command. */
 }cmd;
 
+//! FS100 robot commander class.
+/*!
+ The FS100 robot commander class handles connection with port 50240, which the FS100 uses to recieve robot commands.
+*/
 class Fs100Cmd{
 private:
     //private variables and functions
@@ -94,22 +101,72 @@ private:
 
 public:
     //public variables and functions
+    //! Constructor.
+    /*!
+     Constructor for FS100 commander class.
+    */
     Fs100Cmd(const char* ip){
     IP = ip;
     portno = 50240;
     i = 1;
     pthread_mutex_t mut_lock = PTHREAD_MUTEX_INITIALIZER;
     }
+    //! Initiator.
+    /*!
+     Initiates the sockect connection to the FS100 controller, and initializes internal variables.
+    */
     int init();
+    
+    //! Creates connection.
+    /*!
+     Establishes socket connection to the FS100 controller.
+    */
     int makeConnect();
+    
+    //! Starts sending thread.
+    /*!
+     Starts thread that handles internal command queue and sends commands to FS100 controller. Also sends the first trajectory start message, powering on robot servos and making it ready for further commands.
+     \param retry specifies if the function should retry until FS100 reports success (retry = 1) or just send one message (retry = 0).
+    */
     int start(int retry);
 
     
-    
+    //! Resets trajectory.
+    /*!
+     Resets current trajectory. Empties internal queue, and send trajectory stop followed by trajectory start.
+     \param retry specifies if the function should retry until FS100 reports success (retry = 1) or just send one message (retry = 0).
+    */
     bool resetTrajectory(int *retry);
+    
+    //! Sends trajectory point.
+    /*!
+     Tries to send trajectory point to FS100 controller. Will try until success is reported by FS100 controller.
+     \param pos specifies trajectory point position.
+     \param vel specifies trajectory point velocity.
+     \param time specifies trajectory point time from last point.
+     \param seq speciefies trajectory point sequence number.
+    */
     bool pushTraj(float pos[6],float vel[6],float time,int seq);
+    //! Adds a command to internal queue.
+    /*!
+     Adds a command struct to internal queue, which will be sent to controller as fast as possible.
+     \sa cmd
+     \param cmd_point the command struct containing trajectory data.
+    */ 
     bool addCmdToQueue(cmd cmd_point);
+    //! Adds a point to internal queue.
+    /*!
+     Adds a trajectory point to internal queue, which will be sent to controller as fast as possible. The data provided is converted to a cmd struct and put into internal queue.
+     \param pos specifies trajectory point position.
+     \param vel specifies trajectory point velocity.
+     \param time specifies trajectory point time from last point.
+    */ 
     bool addPointToQueue(float pos[6],float vel[6],float time);
+    
+    //! Closes the class.
+    /*!
+     Closes socket connection and joins all running threads.
+    */
     void pgmClose();
 };
 
