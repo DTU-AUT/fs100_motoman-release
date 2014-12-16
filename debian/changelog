@@ -1,0 +1,31 @@
+ros-hydro-fs100-motoman (0.1.4-0raring) raring; urgency=high
+
+
+
+ -- Asger Winther-Jørgensen (Technical University of Denmark) <awijor@elektro.dtu.dk>  Mon, 15 Dec 2014 23:00:00 -0000
+
+ros-hydro-fs100-motoman (0.1.3-0raring) raring; urgency=high
+
+  * updated package description
+  * Contributors: AsgerWJ
+
+ -- Asger Winther-Jørgensen (Technical University of Denmark) <awijor@elektro.dtu.dk>  Sun, 07 Dec 2014 23:00:00 -0000
+
+ros-hydro-fs100-motoman (0.1.2-0raring) raring; urgency=high
+
+  * removed empty include dir
+  * Contributors: AsgerWJ
+
+ -- awijor <awijor@elektro.dtu.dk>  Thu, 04 Dec 2014 23:00:00 -0000
+
+ros-hydro-fs100-motoman (0.1.1-0raring) raring; urgency=high
+
+  * fixed dependencies
+  * file clean up
+  * added branch hydro-devel
+  * Initial commit
+  * Contributors: AsgerWJ, Technical Univeristy of Denmark
+
+ -- awijor <awijor@elektro.dtu.dk>  Thu, 04 Dec 2014 23:00:00 -0000
+
+
