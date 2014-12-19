@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <package>
   <name>fs100_motoman</name>
-  <version>0.1.4</version>
+  <version>0.1.5</version>
   <description>The fs100_motoman package. Contains a node for connect and streaming to a FS100 controller.</description>
 
 
-  <maintainer email="awijor@elektro.dtu.dk">Asger Winther-Jørgensen (Technical University of Denmark)</maintainer>
+  <maintainer email="ttan@elektro.dtu.dk">Thomas Timm Andersen (Technical University of Denmark)</maintainer>
 
 
   <!-- One license tag required, multiple allowed, one license per tag -->
