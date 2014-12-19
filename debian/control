@@ -1,0 +1,12 @@
+Source: ros-hydro-fs100-motoman
+Section: misc
+Priority: extra
+Maintainer: Thomas Timm Andersen (Technical University of Denmark) <ttan@elektro.dtu.dk>
+Build-Depends: debhelper (>= 9.0.0), ros-hydro-catkin, ros-hydro-message-generation, ros-hydro-roscpp, ros-hydro-sensor-msgs, ros-hydro-std-msgs, ros-hydro-trajectory-msgs
+Homepage: http://ros.org/wiki/fs100_motoman
+Standards-Version: 3.9.2
+
+Package: ros-hydro-fs100-motoman
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-hydro-message-runtime, ros-hydro-roscpp, ros-hydro-sensor-msgs, ros-hydro-std-msgs, ros-hydro-trajectory-msgs
+Description: The fs100_motoman package. Contains a node for connect and streaming to a FS100 controller.

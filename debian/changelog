@@ -1,0 +1,32 @@
+ros-hydro-fs100-motoman (0.1.5-0raring) raring; urgency=high
+
+  *Added install to CMakelist
+  *Changed mainatiner to Thomas Timm Andersen
+  0.1.4 (2014-12-16)
+  ------------------
+  * Updated
+  0.1.3 (2014-12-08)
+  ------------------
+  * updated package description
+  * Contributors: AsgerWJ
+
+ -- Thomas Timm Andersen (Technical University of Denmark) <ttan@elektro.dtu.dk>  Thu, 18 Dec 2014 23:00:00 -0000
+
+ros-hydro-fs100-motoman (0.1.2-0raring) raring; urgency=high
+
+  * removed empty include dir
+  * Contributors: AsgerWJ
+
+ -- awijor <awijor@elektro.dtu.dk>  Thu, 04 Dec 2014 23:00:00 -0000
+
+ros-hydro-fs100-motoman (0.1.1-0raring) raring; urgency=high
+
+  * fixed dependencies
+  * file clean up
+  * added branch hydro-devel
+  * Initial commit
+  * Contributors: AsgerWJ, Technical Univeristy of Denmark
+
+ -- awijor <awijor@elektro.dtu.dk>  Thu, 04 Dec 2014 23:00:00 -0000
+
+
