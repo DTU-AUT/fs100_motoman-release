@@ -39,3 +39,19 @@ add_executable(mh5l_traj src/mh5l_traj.cpp)
 ## Specify libraries to link a library or executable target against
 target_link_libraries(mh5l_traj robotState robotCmd ${catkin_LIBRARIES} )
 
+#############
+## Install ##
+#############
+
+#Binaries
+install(TARGETS
+  mh5l_traj
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+# Libraries
+install (TARGETS
+  robotState
+  robotCmd
+  DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+)
